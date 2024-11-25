@@ -8,3 +8,145 @@ body {
   font-size: 1.6rem;
   font-family: "Sora", sans-serif;
 }
+:root {
+  --header-bg: #10375c;
+}
+.btn {
+  display: inline-block;
+  min-width: 205px;
+  line-height: 60px;
+  background: #2e80ce;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 999px;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+/* ===========================container==================== */
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+  /*cái này để khi nó co lại thì 2 phần tử bên lề cách khoảng 24px  */
+}
+a {
+  text-decoration: none;
+}
+/* ===========================header==================== */
+.header {
+  position: sticky;
+  top: -22px;
+  z-index: 9999;
+  padding: 30px 0 76px;
+  background: var(--header-bg);
+  min-height: 100vh;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar__list {
+  display: flex;
+}
+.navbar__link,
+.header__action--login {
+  padding: 8px 21px;
+  color: #c9d2da;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.header__action--login:hover,
+.navbar__link:hover,
+.navbar__link--active {
+  color: #fff;
+  text-shadow: 1px 0 0 currentColor;
+  /* cái này thì vẫn là để cho chữ nó ko bị biến dựt dựt thôi */
+}
+.header__action--login {
+  margin-right: 7px;
+}
+.navbar__link--active::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  right: 8px;
+  top: -3px;
+}
+.header__action--signup {
+  min-width: 104px;
+  line-height: 44px;
+  font-size: 1.6rem;
+}
+/* =================================hero====================== */
+.hero {
+  display: flex;
+  align-items: center;
+  padding-top: 76px;
+}
+.hero__content {
+  width: 44%;
+}
+
+.hero__heading {
+  color: #fff;
+  min-width: 517px;
+  font-size: 7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.14; /* 114.286% */
+  letter-spacing: -1.4px;
+}
+.hero__descs {
+  color: #c9d2da;
+  margin-top: 22px;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.67; /* 166.667% */
+}
+.hero__row {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  column-gap: 38px;
+}
+
+.hero__phone {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.67; /* 166.667% */
+}
+.hero__media {
+  width: 66%;
+}
+.hero__images {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hero__img {
+  object-fit: cover;
+  border-radius: 6px;
+}
+.hero__img--large {
+  width: 330px;
+  height: 540px;
+  margin-right: -6px; /*-6px là bức ảnh small có kích thước là 210px nhưng khi ảnh large đè lên còn 204px => ảnh lớn chiếm ảnh nhỏ 6px  */
+  /*  */
+  z-index: 1;
+}
+.hero__img--small {
+  bottom: 204px;
+  width: 210px;
+  height: 410px;
+}
