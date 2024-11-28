@@ -39,6 +39,23 @@ body {
   font-weight: 300;
   line-height: 30px; /* 166.667% */
 }
+
+.control {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.control__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #575f66;
+  background: #fff;
+  cursor: pointer;
+}
 /* ===========================container==================== */
 .container {
   width: 1170px;
@@ -154,7 +171,8 @@ a {
 .hero__img--large {
   width: 330px;
   height: 540px;
-  margin-right: -6px; /*-6px là bức ảnh small có kích thước là 210px nhưng khi ảnh large đè lên còn 204px => ảnh lớn chiếm ảnh nhỏ 6px  */
+  margin-right: -6px;
+  /*-6px là bức ảnh small có kích thước là 210px nhưng khi ảnh large đè lên còn 204px => ảnh lớn chiếm ảnh nhỏ 6px  */
   /*  */
   z-index: 1;
 }
@@ -331,4 +349,66 @@ a {
 }
 .about-content .section-desc {
   margin-top: 18px;
+}
+/* ==================================team====================== */
+.team {
+  padding: 85px 0;
+}
+.team-header {
+  text-align: center;
+  margin: 0 auto;
+}
+.team__cta {
+  margin-top: 38px;
+}
+.team__list {
+  margin-top: 70px;
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.team-item__thumb {
+  display: block;
+  height: 290px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.tean-item__img-bg {
+  border-radius: 6px;
+  background: #eaf6ff;
+  padding-top: 28px;
+  overflow: hidden;
+  /* phần nào tràn ra khỏi height hay width thì không hiện */
+}
+.team-item:hover .team-item__thumb {
+  transform: scale(1.1);
+  transition: 0.5s;
+  /* cái này là khi di chuột vào team thì ảnh sẽ phóng to lên, 1.1 là phóng to theo 1.1 lần theo 2 chiều là x,y */
+}
+.team-item__name {
+  margin-top: 12px;
+  color: #10375c;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+.team-iteam__desc {
+  margin-top: 6px;
+  color: #575f66;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.85; /* 185.714% */
+}
+.team__control {
+  margin-top: 38px;
+  justify-content: center;
+}
+.control__btn:hover {
+  background: #2e80ce;
+  color: #fff;
+  transition: 0.25s;
+}
+.control-icon--next {
+  rotate: 180deg;
 }
