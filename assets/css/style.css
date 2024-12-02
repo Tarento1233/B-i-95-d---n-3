@@ -56,6 +56,13 @@ body {
   background: #fff;
   cursor: pointer;
 }
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
 /* ===========================container==================== */
 .container {
   width: 1170px;
@@ -73,9 +80,6 @@ a {
   min-height: 100vh;
 }
 .header-top {
-  position: sticky;
-  top: -8px;
-  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,7 +99,7 @@ a {
 .navbar__link--active {
   color: #fff;
   text-shadow: 1px 0 0 currentColor;
-  /* cái này thì vẫn là để cho chữ nó ko bị biến dựt dựt thôi */
+  /* cái này thì vẫn là để cho chữ nó ko bị dựt dựt thôi */
 }
 .header__action--login {
   margin-right: 7px;
@@ -191,8 +195,7 @@ a {
   text-align: center;
 }
 .service__desc {
-  margin: 0 auto;
-  margin-top: 18px;
+  margin: 18px auto 0;
   width: 468px;
 }
 .service__row {
@@ -373,7 +376,7 @@ a {
   max-width: 100%;
   object-fit: cover;
 }
-.tean-item__img-bg {
+.team-item__img-bg {
   border-radius: 6px;
   background: #eaf6ff;
   padding-top: 28px;
@@ -423,6 +426,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 70px;
+  /* này là để đệm bên trái phải 70px, tại m sài   justify-content: space-between; là nó sát 2 cạnh 2 bên lun*/
   width: 1170px;
   height: 427px;
   flex-shrink: 0;
@@ -549,7 +553,7 @@ a {
 }
 /* ======Appointment=============== */
 .appointment {
-  padding: 85px 0;
+  padding-top: 85px 0;
   background: #f6fbff;
 }
 .appointment__inner {
@@ -577,4 +581,112 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* ==========================footer===================== */
+.footer {
+  margin-top: 170px;
+  padding-top: 100px;
+  background: #10375c;
+  font-family: "Open Sans", serif;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+.footer__desc {
+  margin-top: 21px;
+  color: #a9b3bb;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+.footer__heading {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+.footer__list {
+  margin: 10px 0 28px;
+}
+.footer__link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+  white-space: nowrap;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  background: #fff;
+  color: #2e80ce;
+}
+.footer__social {
+  margin: 20px 0 28px;
+  display: flex;
+  column-gap: 10px;
+}
+.footer__social-btn:hover {
+  background: #2e80ce;
+  color: #fff;
+  transition: 0.25s;
+  transform: scale(1.1);
+}
+.footer-form {
+  display: flex;
+  column-gap: 12px;
+  margin-top: 10px;
+}
+.footer-form__input {
+  border-radius: 4px;
+  width: 212px;
+  height: 46px;
+  flex-shrink: 0;
+  border: 1px solid #406181;
+  background: transparent;
+  outline: none;
+  color: #fff;
+}
+.footer-form__input::placeholder {
+  padding: 10px;
+  color: #9ca8b1;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+.footer-form__submit {
+  width: 108px;
+  height: 46px;
+  border-radius: 4px;
+  background: #2e80ce;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86; /* 185.714% */
+  border: none;
+}
+.footer-form__submit:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+/* mấy cái thẻ input,textarea,select,button này nó sẽ không theo thuộc tính mình đã code(do ăn theo trình duyệt) như font family hay font size nên
+hãy cho nó ont-family: inherit; font-size: inherit; inherit là kế thừa */
+.footer__copyright {
+  border-top: 1px solid #406181;
+}
+.footer__copyright-text {
+  padding: 28px 0 42px;
+  color: #aab3ba;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
 }
